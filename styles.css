@@ -1,3 +1,23 @@
+h1 {
+  font-size: 32px;
+  font-family: 'Helvetica', 'sans-serif';
+  text-align:center;
+  margin: 0 auto;
+}
+.circle,
+.cross {
+  opacity: 0;
+}
+/*#circleBox1 {
+  opacity: 0;
+}*/
+.reveal {
+  opacity: 1!important;
+}
+/*.blue-background {
+  background-color: blue!important;
+}*/
+
 .table {
   max-width: 300px;
   display: flex;
@@ -5,7 +25,14 @@
   width: 300px;
   height: 300px;
   margin : 20px auto;
-  cursor: pointer;
+}
+
+.table-circle {
+  cursor: url('img/circle.png'), auto;
+}
+
+.table-cross {
+  cursor: url('img/cross.png'), auto;
 }
 
 .table div {
@@ -14,41 +41,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  /*margin:10px;*/
+  border: 3px solid white;
 }
-.table div svg {
+.box {
+  background-color: grey;
+}
+.table div img {
   width: 70px;
   height: 70px;
+  display: block;
+  position: absolute;
+  transition: ease .5s;
 }
 
-.box1 {
+/*.circle:hover,
+.cross:hover {
+  opacity: 1;
+  transition: ease .5s;
+}*/
+
+/*#box1 {
   border-bottom: 2px solid black;
 }
 
-.box2 {
+#box2 {
   border-left: 2px solid black;
   border-bottom: 2px solid black;
   border-right: 2px solid black;
 }
 
-.box3 {
+#box3 {
   border-bottom: 2px solid black;
 }
 
-.box5{
+#box5{
   border-left: 2px solid black;
   border-right: 2px solid black;
 }
 
-.box7{
+#box7{
   border-top: 2px solid black;
 }
 
-.box8 {
+#box8 {
   border-right: 2px solid black;
   border-top: 2px solid black;
   border-left: 2px solid black;
 }
 
-.box9 {
+#box9 {
   border-top: 2px solid black;
-}
+}*/
