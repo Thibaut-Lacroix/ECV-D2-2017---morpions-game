@@ -17,7 +17,20 @@
 	<sfw  xmlns="&ns_sfw;">
 		<slices></slices>
 		<sliceSourceBounds  y="2" x="2" bottomLeftOrigin="true" width="66" height="66"></sliceSourceBounds>
+		<optimizationSettings>
+			<targetSettings  fileFormat="PNG8Format" targetSettingsID="0">
+				
+					<PNG8Format  ditherAlgorithm="diffusion" ditherPercent="100" autoReduce="false" interlaced="false" noMatteColor="false" webShiftPercent="0" numColors="256" matteColor="#FFFFFF" rolloverMasterPalette="false" reductionAlgorithm="perceptual" transparency="true">
+					<colorTable  isExact="false"></colorTable>
+					<lockedColors></lockedColors>
+					<colorShiftEntries></colorShiftEntries>
+				</PNG8Format>
+			</targetSettings>
+		</optimizationSettings>
 	</sfw>
 </metadata>
-<circle fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" cx="35" cy="35" r="30"/>
+<g>
+	<path fill="#FFFFFF" d="M35,68C16.804,68,2,53.196,2,35S16.804,2,35,2s33,14.804,33,33S53.196,68,35,68z M35,8
+		C20.112,8,8,20.112,8,35s12.112,27,27,27s27-12.112,27-27S49.888,8,35,8z"/>
+</g>
 </svg>

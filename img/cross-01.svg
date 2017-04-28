@@ -16,11 +16,27 @@
 <metadata>
 	<sfw  xmlns="&ns_sfw;">
 		<slices></slices>
-		<sliceSourceBounds  y="-66.414" x="3.586" bottomLeftOrigin="true" width="62.828" height="62.828"></sliceSourceBounds>
+		<sliceSourceBounds  y="3.586" x="3.586" bottomLeftOrigin="true" width="62.828" height="62.828"></sliceSourceBounds>
+		<optimizationSettings>
+			<targetSettings  fileFormat="PNG8Format" targetSettingsID="0">
+				
+					<PNG8Format  ditherAlgorithm="diffusion" ditherPercent="100" autoReduce="false" interlaced="false" noMatteColor="false" webShiftPercent="0" numColors="256" matteColor="#FFFFFF" rolloverMasterPalette="false" reductionAlgorithm="perceptual" transparency="true">
+					<colorTable  isExact="false"></colorTable>
+					<lockedColors></lockedColors>
+					<colorShiftEntries></colorShiftEntries>
+				</PNG8Format>
+			</targetSettings>
+		</optimizationSettings>
 	</sfw>
 </metadata>
 <g>
-	<line fill="none" stroke="#FF0000" stroke-width="4" stroke-miterlimit="10" x1="5" y1="65" x2="65" y2="5"/>
-	<line fill="none" stroke="#FF0000" stroke-width="4" stroke-miterlimit="10" x1="65" y1="65" x2="5" y2="5"/>
+	<g>
+		
+			<rect x="33" y="-7.426" transform="matrix(0.7071 0.7071 -0.7071 0.7071 35 -14.4975)" fill="#FFFFFF" width="4" height="84.853"/>
+	</g>
+	<g>
+		
+			<rect x="-7.426" y="33" transform="matrix(0.7071 0.7071 -0.7071 0.7071 35 -14.4975)" fill="#FFFFFF" width="84.853" height="4"/>
+	</g>
 </g>
 </svg>

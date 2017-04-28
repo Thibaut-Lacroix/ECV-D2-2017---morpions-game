@@ -12,92 +12,54 @@
 //   svgCircle.appendChild(newElementCircle);
 // }
 
-   var box1 = document.getElementById('box1');
-   var box2 = document.getElementById('box2');
-   var box3 = document.getElementById('box3');
-   var box4 = document.getElementById('box4');
-   var box5 = document.getElementById('box5');
-   var box6 = document.getElementById('box6');
-   var box7 = document.getElementById('box7');
-   var box8 = document.getElementById('box8');
-   var box9 = document.getElementById('box9');
+var jActuel = "rond";
+var boxStatus = [];
 
-   var circle = document.getElementsByClassName("circle");
-   var cross = document.getElementsByClassName("cross");
-
-// CROSS REVEAL
-box1.onclick = function(){
-  document.getElementById("crossBox1").className += " reveal";
+var boxNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function getBox(boxNumber){
+ return document.getElementById('box' + boxNumber);
 };
 
-box2.onclick = function(){
-  document.getElementById("crossBox2").className += " reveal";
+var boxes = boxNumbers.map(getBox);
+
+var circle = document.getElementsByClassName("circle");
+var cross = document.getElementsByClassName("cross");
+
+function addClick(box, index) {
+ box.onclick = function (){
+
+
+   var n = index + 1;
+   boxStatus[n] = jActuel;
+
+   // Verify winner ?
+
+   if (boxStatus[1] !== undefined && boxStatus[1] === boxStatus[2] && boxStatus[2] === boxStatus[3] ){
+     console.log ("winner", jActuel);
+   }
+
+   // Update game Status
+   if (jActuel === "rond") {
+     document.getElementById("circleBox" + n).className += " reveal";
+     jActuel = "croix";
+   }
+   else {
+     document.getElementById("crossBox" + n).className += " reveal";
+     jActuel = "rond";
+   }
+
+
+   //console.log (boxStatus);
+ };
 };
 
-box3.onclick = function(){
-  document.getElementById("crossBox3").className += " reveal";
-};
+boxes.forEach(addClick);
 
-box4.onclick = function(){
-  document.getElementById("crossBox4").className += " reveal";
-};
 
-box5.onclick = function(){
-  document.getElementById("crossBox5").className += " reveal";
-};
+/*
 
-box6.onclick = function(){
-  document.getElementById("crossBox6").className += " reveal";
-};
+- ecrire une fonction verifyWinner();
+- ecrire une fonction resetGame();
+- ecrire une fonction endGame();
 
-box7.onclick = function(){
-  document.getElementById("crossBox7").className += " reveal";
-};
-
-box8.onclick = function(){
-  document.getElementById("crossBox8").className += " reveal";
-};
-
-box9.onclick = function(){
-  document.getElementById("crossBox9").className += " reveal";
-};
-
-// CIRCLE reveal
-
-box1.onclick = function(){
-  document.getElementById("circleBox1").className += " reveal";
-  //document.getElementById("box1").className += " background-color";
-};
-
-box2.onclick = function(){
-  document.getElementById("circleBox2").className += " reveal";
-  box2.className += " background-color";
-};
-
-box3.onclick = function(){
-  document.getElementById("circleBox3").className += " reveal";
-};
-
-box4.onclick = function(){
-  document.getElementById("circleBox4").className += " reveal";
-};
-
-box5.onclick = function(){
-  document.getElementById("circleBox5").className += " reveal";
-};
-
-box6.onclick = function(){
-  document.getElementById("circleBox6").className += " reveal";
-};
-
-box7.onclick = function(){
-  document.getElementById("circleBox7").className += " reveal";
-};
-
-box8.onclick = function(){
-  document.getElementById("circleBox8").className += " reveal";
-};
-
-box9.onclick = function(){
-  document.getElementById("circleBox9").className += " reveal";
-};
+*/
